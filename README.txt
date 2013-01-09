@@ -1,7 +1,7 @@
 ADCOLONY PREMIUM MOBILE VIDEO ADVERTISING NETWORK
 --------------------------------------------------
-Modified: 12/06/2012
-SDK Version: 2.0.1.30
+Modified: 2013/01/08
+SDK Version: 2.0.1.31
 
 
 AdColony SDK 2.0 Package Contents:
