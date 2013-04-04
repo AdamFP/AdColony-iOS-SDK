@@ -10,8 +10,6 @@
 		261BC9AF160BFE4B00886BCB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261BC9AE160BFE4B00886BCB /* StoreKit.framework */; };
 		261BC9B2160BFE5100886BCB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261BC9B1160BFE5100886BCB /* CoreMedia.framework */; };
 		261BC9B4160BFE5500886BCB /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261BC9B3160BFE5500886BCB /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		2627432F16F3E1790065E45E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2627432E16F3E1790065E45E /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		2627433216F3E17F0065E45E /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2627433116F3E17F0065E45E /* libz.1.2.5.dylib */; };
 		265A1C041607B2DA00041715 /* coin-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 265A1BFD1607B2DA00041715 /* coin-ipad.png */; };
 		265A1C051607B2DA00041715 /* coin-ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 265A1BFE1607B2DA00041715 /* coin-ipad@2x.png */; };
 		265A1C061607B2DA00041715 /* coin.png in Resources */ = {isa = PBXBuildFile; fileRef = 265A1BFF1607B2DA00041715 /* coin.png */; };
@@ -59,8 +57,6 @@
 		261BC9AE160BFE4B00886BCB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		261BC9B1160BFE5100886BCB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		261BC9B3160BFE5500886BCB /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		2627432E16F3E1790065E45E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		2627433116F3E17F0065E45E /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		265A1BFD1607B2DA00041715 /* coin-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coin-ipad.png"; sourceTree = "<group>"; };
 		265A1BFE1607B2DA00041715 /* coin-ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coin-ipad@2x.png"; sourceTree = "<group>"; };
 		265A1BFF1607B2DA00041715 /* coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coin.png; sourceTree = "<group>"; };
@@ -105,10 +101,10 @@
 		26BF85711601259300FEFD2C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		26D6D9A4160D6CDA00BE86F2 /* AdColonyPublic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdColonyPublic.h; sourceTree = "<group>"; };
 		26D6D9A5160D6CDA00BE86F2 /* libAdColony.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdColony.a; sourceTree = "<group>"; };
-		26D6D9E1160D6FE900BE86F2 /* icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_57.png; path = ../icon_57.png; sourceTree = "<group>"; };
-		26D6D9E4160D6FEC00BE86F2 /* icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_114.png; path = ../icon_114.png; sourceTree = "<group>"; };
-		26D6D9E6160D6FF100BE86F2 /* icon_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_72.png; path = ../icon_72.png; sourceTree = "<group>"; };
-		26D6D9E8160D6FF400BE86F2 /* icon_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_144.png; path = ../icon_144.png; sourceTree = "<group>"; };
+		26D6D9E1160D6FE900BE86F2 /* icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_57.png; sourceTree = "<group>"; };
+		26D6D9E4160D6FEC00BE86F2 /* icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_114.png; sourceTree = "<group>"; };
+		26D6D9E6160D6FF100BE86F2 /* icon_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_72.png; sourceTree = "<group>"; };
+		26D6D9E8160D6FF400BE86F2 /* icon_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_144.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,8 +112,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2627433216F3E17F0065E45E /* libz.1.2.5.dylib in Frameworks */,
-				2627432F16F3E1790065E45E /* Social.framework in Frameworks */,
 				268E0541162615D700D69B86 /* MessageUI.framework in Frameworks */,
 				268E053D162615D000D69B86 /* EventKit.framework in Frameworks */,
 				268E053E162615D000D69B86 /* EventKitUI.framework in Frameworks */,
@@ -141,6 +135,10 @@
 		26BF850D160111BE00FEFD2C = {
 			isa = PBXGroup;
 			children = (
+				26D6D9E8160D6FF400BE86F2 /* icon_144.png */,
+				26D6D9E6160D6FF100BE86F2 /* icon_72.png */,
+				26D6D9E4160D6FEC00BE86F2 /* icon_114.png */,
+				26D6D9E1160D6FE900BE86F2 /* icon_57.png */,
 				26D6D9A3160D6CDA00BE86F2 /* AdColony Library */,
 				26BF8522160111BE00FEFD2C /* AdColonyAdvanced */,
 				26BF851B160111BE00FEFD2C /* Frameworks */,
@@ -159,20 +157,18 @@
 		26BF851B160111BE00FEFD2C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				261BC9B3160BFE5500886BCB /* AdSupport.framework */,
-				26BF856B1601168600FEFD2C /* AVFoundation.framework */,
-				26BF8520160111BE00FEFD2C /* CoreGraphics.framework */,
-				261BC9B1160BFE5100886BCB /* CoreMedia.framework */,
-				26BF85461601122900FEFD2C /* CoreTelephony.framework */,
+				268E0540162615D700D69B86 /* MessageUI.framework */,
 				268E053B162615D000D69B86 /* EventKit.framework */,
 				268E053C162615D000D69B86 /* EventKitUI.framework */,
-				26BF851E160111BE00FEFD2C /* Foundation.framework */,
-				2627433116F3E17F0065E45E /* libz.1.2.5.dylib */,
-				26BF85441601121B00FEFD2C /* MediaPlayer.framework */,
-				268E0540162615D700D69B86 /* MessageUI.framework */,
-				2627432E16F3E1790065E45E /* Social.framework */,
+				261BC9B3160BFE5500886BCB /* AdSupport.framework */,
+				261BC9B1160BFE5100886BCB /* CoreMedia.framework */,
 				261BC9AE160BFE4B00886BCB /* StoreKit.framework */,
+				26BF856B1601168600FEFD2C /* AVFoundation.framework */,
+				26BF8520160111BE00FEFD2C /* CoreGraphics.framework */,
+				26BF85461601122900FEFD2C /* CoreTelephony.framework */,
 				26BF85481601123200FEFD2C /* SystemConfiguration.framework */,
+				26BF851E160111BE00FEFD2C /* Foundation.framework */,
+				26BF85441601121B00FEFD2C /* MediaPlayer.framework */,
 				26BF851C160111BE00FEFD2C /* UIKit.framework */,
 			);
 			name = Frameworks;
@@ -209,10 +205,6 @@
 		26BF854A1601129900FEFD2C /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				26D6D9E8160D6FF400BE86F2 /* icon_144.png */,
-				26D6D9E6160D6FF100BE86F2 /* icon_72.png */,
-				26D6D9E4160D6FEC00BE86F2 /* icon_114.png */,
-				26D6D9E1160D6FE900BE86F2 /* icon_57.png */,
 				265A1BFD1607B2DA00041715 /* coin-ipad.png */,
 				265A1BFE1607B2DA00041715 /* coin-ipad@2x.png */,
 				265A1BFF1607B2DA00041715 /* coin.png */,

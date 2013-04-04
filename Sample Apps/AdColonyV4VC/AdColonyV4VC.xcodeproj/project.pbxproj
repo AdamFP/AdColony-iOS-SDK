@@ -11,8 +11,6 @@
 		261BC9A5160BFDF600886BCB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261BC9A4160BFDF600886BCB /* AVFoundation.framework */; };
 		261BC9A7160BFDFC00886BCB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261BC9A6160BFDFC00886BCB /* CoreMedia.framework */; };
 		261BC9A9160BFE0000886BCB /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261BC9A8160BFE0000886BCB /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		2627432616F3E11C0065E45E /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2627432516F3E11C0065E45E /* libz.1.2.5.dylib */; };
-		2627432916F3E1230065E45E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2627432816F3E1230065E45E /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		265A1BCB1607A39000041715 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 265A1BC91607A39000041715 /* bg.jpg */; };
 		265A1BCC1607A39000041715 /* bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 265A1BCA1607A39000041715 /* bg@2x.jpg */; };
 		265A1BD91607A3D400041715 /* btn-ipad-press.png in Resources */ = {isa = PBXBuildFile; fileRef = 265A1BD11607A3D400041715 /* btn-ipad-press.png */; };
@@ -59,8 +57,6 @@
 		261BC9A4160BFDF600886BCB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		261BC9A6160BFDFC00886BCB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		261BC9A8160BFE0000886BCB /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		2627432516F3E11C0065E45E /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
-		2627432816F3E1230065E45E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		265A1BC91607A39000041715 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		265A1BCA1607A39000041715 /* bg@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bg@2x.jpg"; sourceTree = "<group>"; };
 		265A1BD11607A3D400041715 /* btn-ipad-press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-ipad-press.png"; sourceTree = "<group>"; };
@@ -114,8 +110,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2627432916F3E1230065E45E /* Social.framework in Frameworks */,
-				2627432616F3E11C0065E45E /* libz.1.2.5.dylib in Frameworks */,
 				268E05361626159200D69B86 /* MessageUI.framework in Frameworks */,
 				268E05341626158E00D69B86 /* EventKitUI.framework in Frameworks */,
 				268E05311626158A00D69B86 /* EventKit.framework in Frameworks */,
@@ -187,19 +181,17 @@
 		26C28CD315DC5B1E00C2DDE0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				261BC9A8160BFE0000886BCB /* AdSupport.framework */,
-				261BC9A4160BFDF600886BCB /* AVFoundation.framework */,
-				26C28CD815DC5B1E00C2DDE0 /* CoreGraphics.framework */,
-				261BC9A6160BFDFC00886BCB /* CoreMedia.framework */,
-				26C28CFC15DC5B7D00C2DDE0 /* CoreTelephony.framework */,
-				268E05301626158A00D69B86 /* EventKit.framework */,
-				268E05331626158E00D69B86 /* EventKitUI.framework */,
-				26C28CD615DC5B1E00C2DDE0 /* Foundation.framework */,
-				2627432516F3E11C0065E45E /* libz.1.2.5.dylib */,
-				26C28CFE15DC5B8400C2DDE0 /* MediaPlayer.framework */,
 				268E05351626159200D69B86 /* MessageUI.framework */,
-				2627432816F3E1230065E45E /* Social.framework */,
+				268E05331626158E00D69B86 /* EventKitUI.framework */,
+				268E05301626158A00D69B86 /* EventKit.framework */,
+				261BC9A8160BFE0000886BCB /* AdSupport.framework */,
+				261BC9A6160BFDFC00886BCB /* CoreMedia.framework */,
+				261BC9A4160BFDF600886BCB /* AVFoundation.framework */,
 				261BC9A1160BFDF200886BCB /* StoreKit.framework */,
+				26C28CD815DC5B1E00C2DDE0 /* CoreGraphics.framework */,
+				26C28CFC15DC5B7D00C2DDE0 /* CoreTelephony.framework */,
+				26C28CD615DC5B1E00C2DDE0 /* Foundation.framework */,
+				26C28CFE15DC5B8400C2DDE0 /* MediaPlayer.framework */,
 				26C28D0015DC5B8A00C2DDE0 /* SystemConfiguration.framework */,
 				26C28CD415DC5B1E00C2DDE0 /* UIKit.framework */,
 			);

@@ -11,8 +11,6 @@
 		261BC998160BFD9D00886BCB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261BC997160BFD9D00886BCB /* CoreMedia.framework */; };
 		261BC99A160BFDAA00886BCB /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261BC999160BFDAA00886BCB /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		261BC99C160BFDB700886BCB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261BC99B160BFDB700886BCB /* StoreKit.framework */; };
-		2627431D16F3E0A70065E45E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2627431C16F3E0A70065E45E /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		2627432016F3E0B00065E45E /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2627431F16F3E0B00065E45E /* libz.1.2.5.dylib */; };
 		264C6C2415E591C1004ACC0A /* bg-ipad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 264C6C1815E591C1004ACC0A /* bg-ipad.jpg */; };
 		264C6C2515E591C1004ACC0A /* bg-ipad@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 264C6C1915E591C1004ACC0A /* bg-ipad@2x.jpg */; };
 		264C6C2615E591C1004ACC0A /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 264C6C1A15E591C1004ACC0A /* bg.jpg */; };
@@ -55,8 +53,6 @@
 		261BC997160BFD9D00886BCB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		261BC999160BFDAA00886BCB /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		261BC99B160BFDB700886BCB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		2627431C16F3E0A70065E45E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		2627431F16F3E0B00065E45E /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		264C6C1815E591C1004ACC0A /* bg-ipad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bg-ipad.jpg"; sourceTree = "<group>"; };
 		264C6C1915E591C1004ACC0A /* bg-ipad@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bg-ipad@2x.jpg"; sourceTree = "<group>"; };
 		264C6C1A15E591C1004ACC0A /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
@@ -105,8 +101,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2627432016F3E0B00065E45E /* libz.1.2.5.dylib in Frameworks */,
-				2627431D16F3E0A70065E45E /* Social.framework in Frameworks */,
 				261BC99A160BFDAA00886BCB /* AdSupport.framework in Frameworks */,
 				268E052B1626151E00D69B86 /* MessageUI.framework in Frameworks */,
 				268E05291626151800D69B86 /* EventKitUI.framework in Frameworks */,
@@ -174,19 +168,17 @@
 		26A64A0015DAE158000B3DFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				268E052A1626151E00D69B86 /* MessageUI.framework */,
+				268E05281626151800D69B86 /* EventKitUI.framework */,
+				268E05251626151400D69B86 /* EventKit.framework */,
+				261BC99B160BFDB700886BCB /* StoreKit.framework */,
 				261BC999160BFDAA00886BCB /* AdSupport.framework */,
+				261BC997160BFD9D00886BCB /* CoreMedia.framework */,
 				261BC994160BFD9400886BCB /* AVFoundation.framework */,
 				26A64A0515DAE159000B3DFF /* CoreGraphics.framework */,
-				261BC997160BFD9D00886BCB /* CoreMedia.framework */,
 				26A64A2915DAE8B5000B3DFF /* CoreTelephony.framework */,
-				268E05251626151400D69B86 /* EventKit.framework */,
-				268E05281626151800D69B86 /* EventKitUI.framework */,
 				26A64A0315DAE159000B3DFF /* Foundation.framework */,
-				2627431F16F3E0B00065E45E /* libz.1.2.5.dylib */,
 				26A64A2515DAE7D5000B3DFF /* MediaPlayer.framework */,
-				268E052A1626151E00D69B86 /* MessageUI.framework */,
-				2627431C16F3E0A70065E45E /* Social.framework */,
-				261BC99B160BFDB700886BCB /* StoreKit.framework */,
 				26A64A2715DAE7F2000B3DFF /* SystemConfiguration.framework */,
 				26A64A0115DAE159000B3DFF /* UIKit.framework */,
 			);
