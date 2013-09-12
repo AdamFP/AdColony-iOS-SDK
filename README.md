@@ -6,12 +6,11 @@ SDK Version: 2.2.2
 Contains:
 ----------------------------------
 * AdColony.framework (iOS)
-* Documentation
-  * W-9 Form.pdf
 * Sample Apps
   * AdColonyAdvanced
   * AdColonyBasic
   * AdColonyV4VC
+* W-9 Form.pdf
 
 Getting Started with AdColony:
 ----------------------------------
@@ -21,7 +20,7 @@ First time and returning users should review the [quick start guide](https://git
 ----------------------------------
 * AdColony 2.2 has been fully tested against the most recent iOS 7 betas and gold master seed
 * AdColony is now packaged as a framework and its API is not backwards compatible with AdColony 2.0 integrations
-* AdColony relies on additional frameworks and libraries; please see the Wiki for details
+* AdColony relies on additional frameworks and libraries; see the [quick start guide](https://github.com/AdColony/AdColony-iOS-SDK/wiki) for details. 
 * The AdColony class has had methods removed and renamed for consistency
 * The AdColonyDelegate protocol has had methods removed and renamed; its use is no longer mandatory
 * The AdColonyTakeoverAdDelegate protocol has been renamed to AdColonyAdDelegate; it has had methods removed and renamed
