@@ -1,11 +1,10 @@
-ADCOLONY PREMIUM MOBILE VIDEO ADVERTISING NETWORK
-==================================================
-Modified: 2013/08/16  
+AdColony iOS SDK
+==================================
+Modified: 2013/08/29  
 SDK Version: 2.2.2  
 
-
-AdColony iOS SDK 2.2 Package Contents:
----------------------------------------
+Contains:
+----------------------------------
 * AdColony.framework (iOS)
 * Documentation
   * W-9 Form.pdf
@@ -14,15 +13,13 @@ AdColony iOS SDK 2.2 Package Contents:
   * AdColonyBasic
   * AdColonyV4VC
 
-
 Getting Started with AdColony:
 ----------------------------------
-First time and returning users should review the [AdColony Github Wiki](https://github.com/AdColony/AdColony-iOS-SDK/wiki), as the AdColony API has been changed.
-
+First time and returning users should review the [AdColony iOS SDK Github Wiki](https://github.com/AdColony/AdColony-iOS-SDK/wiki), as the AdColony API has been changed.
 
 2.2 Change Log:
 ----------------------------------
-* AdColony 2.2 has been fully tested against the most recent iOS 7 betas
+* AdColony 2.2 has been fully tested against the most recent iOS 7 betas and gold master seed
 * AdColony is now packaged as a framework and its API is not backwards compatible with AdColony 2.0 integrations
 * AdColony relies on additional frameworks and libraries; please see the Wiki for details
 * The AdColony class has had methods removed and renamed for consistency
