@@ -15,7 +15,7 @@ Contains:
 
 Getting Started with AdColony:
 ----------------------------------
-First time and returning users should review the [AdColony iOS SDK Github Wiki](https://github.com/AdColony/AdColony-iOS-SDK/wiki), as the AdColony API has been changed.
+First time and returning users should review the [quick start guide](https://github.com/AdColony/AdColony-iOS-SDK/wiki) because the API and usage of our iOS SDK have changed with this release.
 
 2.2 Change Log:
 ----------------------------------
