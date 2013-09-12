@@ -24,7 +24,7 @@ First time and returning users should review the [AdColony Github Wiki](https://
 ----------------------------------
 * AdColony 2.2 has been fully tested against the most recent iOS 7 betas
 * AdColony is now packaged as a framework and its API is not backwards compatible with AdColony 2.0 integrations
-* AdColony relies on additional frameworks on libraries; please see the Wiki for details
+* AdColony relies on additional frameworks and libraries; please see the Wiki for details
 * The AdColony class has had methods removed and renamed for consistency
 * The AdColonyDelegate protocol has had methods removed and renamed; its use is no longer mandatory
 * The AdColonyTakeoverAdDelegate protocol has been renamed to AdColonyAdDelegate; it has had methods removed and renamed
