@@ -1,7 +1,7 @@
 AdColony iOS SDK
 ==================================
-Modified: 2013/08/29  
-SDK Version: 2.2.2  
+Modified: 2013/11/18  
+SDK Version: 2.2.4  
 
 Contains:
 ----------------------------------
@@ -15,6 +15,12 @@ Contains:
 Getting Started with AdColony:
 ----------------------------------
 First time and returning users should review the [quick start guide](https://github.com/AdColony/AdColony-iOS-SDK/wiki) because the API and usage of our iOS SDK have changed with this release.
+
+2.2.4 Change Log:
+----------------------------------
+* Added support for the 64-bit ARM architecture on new Apple devices
+* The AdColony iOS SDK disables itself on iOS 4.3 (iOS 5.0+ is fully supported); the minimum Xcode Deployment Target remains iOS 4.3
+* Bug fixes
 
 2.2 Change Log:
 ----------------------------------
