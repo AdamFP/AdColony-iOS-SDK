@@ -28,7 +28,7 @@ New and returning users should review the [quick start guide](https://github.com
 * AdColony class new method to request AdColonyNativeAdView objects
 * Removed collection of OpenUDID, ODIN1, and MAC-SHA1 device identifiers on iOS 7+
 * Removed collection of IDFV device identifier altogether
-* Bug fixes
+* Bug fixes and threading improvements
 
 2.2.4 Change Log:
 ----------------------------------
