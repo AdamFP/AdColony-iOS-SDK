@@ -1,7 +1,11 @@
 AdColony iOS SDK
 ==================================
-Modified: 2013/11/18  
-SDK Version: 2.2.4  
+Modified: 2014/08/13  
+SDK Version: 2.3.12  
+
+To Download:
+----------------------------------
+The simplest way to obtain the AdColony iOS SDK is to click the "Download ZIP" button located in the right-hand navigation pane of the Github repository page.
 
 Contains:
 ----------------------------------
@@ -14,7 +18,17 @@ Contains:
 
 Getting Started with AdColony:
 ----------------------------------
-First time and returning users should review the [quick start guide](https://github.com/AdColony/AdColony-iOS-SDK/wiki) because the API and usage of our iOS SDK have changed with this release.
+New and returning users should review the [quick start guide](https://github.com/AdColony/AdColony-iOS-SDK/wiki), which contains detailed integration instructions.
+
+2.3.12 Change Log:
+----------------------------------
+* Initial public release of AdColony Instant-Feed
+* New requirement: minimum Xcode Deployment Target of iOS 5.0
+* New public class AdColonyNativeAdView which implements AdColony Instant-Feed
+* AdColony class new method to request AdColonyNativeAdView objects
+* Removed collection of OpenUDID, ODIN1, and MAC-SHA1 device identifiers on iOS 7+
+* Removed collection of IDFV device identifier altogether
+* Bug fixes
 
 2.2.4 Change Log:
 ----------------------------------
