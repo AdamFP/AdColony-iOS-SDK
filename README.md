@@ -20,6 +20,12 @@ Getting Started with AdColony:
 ----------------------------------
 New and returning users should review the [quick start guide](https://github.com/AdColony/AdColony-iOS-SDK/wiki), which contains detailed integration instructions.
 
+2.4.10 Change Log:
+----------------------------------
+* Fully tested against the iOS 8 Gold Master
+* Refinements and optimizations to AdColony Instant-Feed
+* Bug fixes 
+
 2.3.12 Change Log:
 ----------------------------------
 * Initial public release of AdColony Instant-Feed
