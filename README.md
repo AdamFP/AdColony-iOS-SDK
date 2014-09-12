@@ -1,7 +1,7 @@
 AdColony iOS SDK
 ==================================
 Modified: 2014/08/13  
-SDK Version: 2.3.12  
+SDK Version: 2.4.10  
 
 To Download:
 ----------------------------------
