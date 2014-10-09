@@ -1,7 +1,7 @@
 AdColony iOS SDK
 ==================================
-Modified: 2014/09/12  
-SDK Version: 2.4.10  
+Modified: 2014/10/08
+SDK Version: 2.4.12  
 
 To Download:
 ----------------------------------
@@ -19,6 +19,12 @@ Contains:
 Getting Started with AdColony:
 ----------------------------------
 New and returning users should review the [quick start guide](https://github.com/AdColony/AdColony-iOS-SDK/wiki), which contains detailed integration instructions.
+
+2.4.12 Change Log:
+----------------------------------
+* Fixed memory leak caused by UIWebView on iOS 8
+* Addressed multiple conflicts with Unity plugin
+* Improved orientation functionality
 
 2.4.10 Change Log:
 ----------------------------------
