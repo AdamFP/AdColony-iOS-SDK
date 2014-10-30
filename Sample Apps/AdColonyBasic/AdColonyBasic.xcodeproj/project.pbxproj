@@ -411,6 +411,7 @@
 		26A64A1F15DAE159000B3DFF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Owain Moss (PN4M4VP4GM)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../..\"",
@@ -425,6 +426,7 @@
 					"-fobjc-arc",
 				);
 				PRODUCT_NAME = "AC Basic";
+				PROVISIONING_PROFILE = "807dd515-839b-4ce1-852a-02578e476fe4";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -446,6 +448,7 @@
 					"-fobjc-arc",
 				);
 				PRODUCT_NAME = "AC Basic";
+				PROVISIONING_PROFILE = "807dd515-839b-4ce1-852a-02578e476fe4";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -14,7 +14,7 @@
 		<string>https://github.com/AdColony/AdColony-iOS-SDK.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Sample Apps/AdColonyBasic/AdColonyBasic.xcodeproj/project.xcworkspace</string>
+	<string>Sample Apps/AdColonyBasic/AdColonyBasic.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>78EFEB2F3C12FF38F83D106B99C306C91EF9CBC2</key>

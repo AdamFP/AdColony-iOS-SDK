@@ -5,9 +5,8 @@
  *  Created by Ty Heath on 7/17/12.
  */
 
+#import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-
-#import "AdColonyNativeAdView.h"
 
 #pragma mark -
 #pragma mark Constants
@@ -22,6 +21,11 @@ typedef enum {
     ADCOLONY_ZONE_STATUS_ACTIVE,        /**< The zone has completed preparing ads for display .*/
     ADCOLONY_ZONE_STATUS_UNKNOWN        /**< AdColony has not yet received the zone's configuration from the server. */
 } ADCOLONY_ZONE_STATUS;
+
+#pragma mark -
+#pragma mark Forward declarations
+
+@class AdColonyNativeAdView;
 
 #pragma mark -
 #pragma mark AdColonyDelegate protocol

@@ -1,7 +1,7 @@
 AdColony iOS SDK
 ==================================
-Modified: 2014/10/08  
-SDK Version: 2.4.12  
+Modified: 2014/10/30  
+SDK Version: 2.4.13  
 
 To Download:
 ----------------------------------
@@ -19,6 +19,14 @@ Contains:
 Getting Started with AdColony:
 ----------------------------------
 New and returning users should review the [quick start guide](https://github.com/AdColony/AdColony-iOS-SDK/wiki), which contains detailed integration instructions.
+
+2.4.13 Change Log:
+----------------------------------
+* Fully compatible with iOS 8.1
+* Stylistic improvements to in-video engagement feature
+* Fixed rare black screen on iPad Airs running iOS 8
+* Fixed first-time install crash bug caused by Unity 4.5
+* Miscellaneous bug fixes
 
 2.4.12 Change Log:
 ----------------------------------
