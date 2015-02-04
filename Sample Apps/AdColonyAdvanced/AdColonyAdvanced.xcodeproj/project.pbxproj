@@ -55,6 +55,7 @@
 		26D6D9E5160D6FEC00BE86F2 /* icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 26D6D9E4160D6FEC00BE86F2 /* icon_114.png */; };
 		26D6D9E7160D6FF100BE86F2 /* icon_72.png in Resources */ = {isa = PBXBuildFile; fileRef = 26D6D9E6160D6FF100BE86F2 /* icon_72.png */; };
 		26D6D9E9160D6FF400BE86F2 /* icon_144.png in Resources */ = {isa = PBXBuildFile; fileRef = 26D6D9E8160D6FF400BE86F2 /* icon_144.png */; };
+		9F00599E1A829C6100F06957 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F00599D1A829C6100F06957 /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +113,7 @@
 		26D6D9E4160D6FEC00BE86F2 /* icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_114.png; path = ../icon_114.png; sourceTree = "<group>"; };
 		26D6D9E6160D6FF100BE86F2 /* icon_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_72.png; path = ../icon_72.png; sourceTree = "<group>"; };
 		26D6D9E8160D6FF400BE86F2 /* icon_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_144.png; path = ../icon_144.png; sourceTree = "<group>"; };
+		9F00599D1A829C6100F06957 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				261BC9AF160BFE4B00886BCB /* StoreKit.framework in Frameworks */,
 				26BF85491601123200FEFD2C /* SystemConfiguration.framework in Frameworks */,
 				26BF851D160111BE00FEFD2C /* UIKit.framework in Frameworks */,
+				9F00599E1A829C6100F06957 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +166,7 @@
 		26BF851B160111BE00FEFD2C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F00599D1A829C6100F06957 /* WebKit.framework */,
 				2627433116F3E17F0065E45E /* libz.1.2.5.dylib */,
 				26AB63B917B457660063DEB5 /* AdColony.framework */,
 				261BC9B3160BFE5500886BCB /* AdSupport.framework */,
