@@ -1,7 +1,7 @@
 AdColony iOS SDK
 ==================================
-Modified: 2014/10/30  
-SDK Version: 2.4.13  
+Modified: 2015/02/04  
+SDK Version: 2.5.0  
 
 To Download:
 ----------------------------------
@@ -19,6 +19,15 @@ Contains:
 Getting Started with AdColony:
 ----------------------------------
 New and returning users should review the [quick start guide](https://github.com/AdColony/AdColony-iOS-SDK/wiki), which contains detailed integration instructions.
+
+2.5.0 Change Log:
+----------------------------------
+* WKWebView for iOS 8
+* API for reporting in-app purchases (IAPs)
+* New ad-completion callback to support In-App Purchase Promo (IAPP) feature
+* AdColonyAdInfo class for communicating ad-specific details
+* Increased minimum OS version for showing videos to 6.0; SDK disables itself on prior versions
+* ODIN1, OpenUDID, and MAC identifiers no longer collected
 
 2.4.13 Change Log:
 ----------------------------------
