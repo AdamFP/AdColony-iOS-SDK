@@ -68,7 +68,7 @@
  * Use this property to access the UIButton and customize anything about it except its title text and tap action.
  * @param engagementButton The engagement button that is already embedded within this ad.
  */
-@property (nonatomic, readonly) UIButton* engagementButton;
+@property (nonatomic) UIButton* engagementButton;
 
 /**
  * Returns the recommended height for the AdColonyNativeAdView if it will be displayed at the specified width.
