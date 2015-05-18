@@ -54,7 +54,7 @@
 		balance += amount;
 		
 		// Persist the currency balance
-		[storage setValue:[NSNumber numberWithUnsignedInt:balance] forKey:kCurrencyBalance];
+		[storage setValue:[NSNumber numberWithUnsignedInt:(unsigned int)balance] forKey:kCurrencyBalance];
 		[storage synchronize];
 		
 		// Post a notification so the rest of the app knows the balance changed

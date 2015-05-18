@@ -1,7 +1,7 @@
 AdColony iOS SDK
 ==================================
-Modified: 2015/02/04  
-SDK Version: 2.5.0  
+Modified: 2015/05/18  
+SDK Version: 2.5.1  
 
 To Download:
 ----------------------------------
@@ -19,6 +19,12 @@ Contains:
 Getting Started with AdColony:
 ----------------------------------
 New and returning users should review the [quick start guide](https://github.com/AdColony/AdColony-iOS-SDK/wiki), which contains detailed integration instructions.
+
+2.5.1 Change Log:
+----------------------------------
+* Native ads now maintain a weak reference to the app’s view controller
+* Native ad callback for capturing ad-engagement events
+* Synchronized ad-finished callback with AdColony view controller dismissal
 
 2.5.0 Change Log:
 ----------------------------------

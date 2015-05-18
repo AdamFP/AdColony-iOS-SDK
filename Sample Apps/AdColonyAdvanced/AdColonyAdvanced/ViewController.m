@@ -86,7 +86,7 @@
 - (void)updateCurrencyBalance {
     NSNumber* wrappedBalance = [[NSUserDefaults standardUserDefaults] objectForKey:kCurrencyBalance];
     NSUInteger balance = wrappedBalance && [wrappedBalance isKindOfClass:[NSNumber class]] ? [wrappedBalance unsignedIntValue] : 0;
-    [currencyLabel setText:[NSString stringWithFormat:@"%u", balance]];
+    [currencyLabel setText:[NSString stringWithFormat:@"%lu", (unsigned long)balance]];
 }
 
 #pragma mark -
