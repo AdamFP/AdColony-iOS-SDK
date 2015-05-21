@@ -44,24 +44,44 @@
     // Handle virtual currency display
     [self updateCurrencyBalance];
     [self zoneLoading];
+    //remove observers when application goes in background
+    [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidEnterBackgroundNotification object:nil
+                                                       queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification* note) {
+                                                           [[NSNotificationCenter defaultCenter] removeObserver:self name:kCurrencyBalanceChange object:nil];
+                                                           
+                                                           [[NSNotificationCenter defaultCenter] removeObserver:self name:kZoneReady object:nil];
+                                                           [[NSNotificationCenter defaultCenter] removeObserver:self name:kZoneOff object:nil];
+                                                           [[NSNotificationCenter defaultCenter] removeObserver:self name:kZoneLoading object:nil];
+                                                       }];
+
 }
 
 - (void) viewDidAppear:(BOOL)animated
 {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateCurrencyBalance) name:kCurrencyBalanceChange object:nil];
+    [[NSNotificationCenter defaultCenter] addObserverForName:kCurrencyBalanceChange object:nil
+                                                       queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+                                                           [self updateCurrencyBalance];
+                                                       }];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zoneReady) name:kZoneReady object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zoneOff) name:kZoneOff object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zoneLoading) name:kZoneLoading object:nil];
-}
-
-- (void) viewWillDisappear:(BOOL)animated
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:kCurrencyBalanceChange object:nil];
+    [[NSNotificationCenter defaultCenter] addObserverForName:kZoneReady object:nil
+                                                       queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+                                                           [spinner stopAnimating];
+                                                           [spinner setHidden:YES];
+                                                           [button setEnabled:YES];
+                                                       }];
     
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:kZoneReady object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:kZoneOff object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:kZoneLoading object:nil];
+    [[NSNotificationCenter defaultCenter] addObserverForName:kZoneOff object:nil
+                                                       queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+                                                           [spinner stopAnimating];
+                                                           [spinner setHidden:YES];
+                                                           [button setEnabled:NO];
+                                                       }];
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:kZoneLoading object:nil
+                                                       queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+                                                           [self zoneLoading];
+                                                       }];
+    
 }
 
 - (void)zoneReady {
