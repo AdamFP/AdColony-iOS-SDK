@@ -42,7 +42,8 @@
 // For applications with a server, contact the server to retrieve an updated currency balance
 // On success, posts an NSNotification so the rest of the app can update the UI
 // On failure, posts an NSNotification so the rest of the app can disable V4VC UI elements
-- ( void ) onAdColonyV4VCReward:(BOOL)success currencyName:(NSString*)currencyName currencyAmount:(int)amount inZone:(NSString*)zoneID {
+- ( void ) onAdColonyV4VCReward:(BOOL)success currencyName:(NSString*)currencyName currencyAmount:(int)amount inZone:(NSString*)zoneID
+{
 	NSLog(@"AdColony zone %@ reward %i %i %@", zoneID, success, amount, currencyName);
 	
 	if (success) {
@@ -66,12 +67,13 @@
 
 #pragma mark -
 #pragma mark AdColony ad fill
-- ( void ) onAdColonyAdAvailabilityChange:(BOOL)available inZone:(NSString*) zoneID {
+
+- ( void ) onAdColonyAdAvailabilityChange:(BOOL)available inZone:(NSString*) zoneID
+{
 	if(available) {
 		[[NSNotificationCenter defaultCenter] postNotificationName:kZoneReady object:nil];
 	} else {
 		[[NSNotificationCenter defaultCenter] postNotificationName:kZoneLoading object:nil];
 	}
 }
-
 @end

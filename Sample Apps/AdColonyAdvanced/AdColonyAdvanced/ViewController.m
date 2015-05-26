@@ -44,66 +44,67 @@
     // Handle virtual currency display
     [self updateCurrencyBalance];
     [self zoneLoading];
-    //remove observers when application goes in background
-    [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidEnterBackgroundNotification object:nil
-                                                       queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification* note) {
-                                                           [[NSNotificationCenter defaultCenter] removeObserver:self name:kCurrencyBalanceChange object:nil];
-                                                           
-                                                           [[NSNotificationCenter defaultCenter] removeObserver:self name:kZoneReady object:nil];
-                                                           [[NSNotificationCenter defaultCenter] removeObserver:self name:kZoneOff object:nil];
-                                                           [[NSNotificationCenter defaultCenter] removeObserver:self name:kZoneLoading object:nil];
-                                                       }];
 
+    [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidEnterBackgroundNotification object:nil
+        queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification* note) {
+            [[NSNotificationCenter defaultCenter] removeObserver:self name:kCurrencyBalanceChange object:nil];
+            [[NSNotificationCenter defaultCenter] removeObserver:self name:kZoneReady object:nil];
+            [[NSNotificationCenter defaultCenter] removeObserver:self name:kZoneOff object:nil];
+            [[NSNotificationCenter defaultCenter] removeObserver:self name:kZoneLoading object:nil];
+        }];
 }
 
 - (void) viewDidAppear:(BOOL)animated
 {
     [[NSNotificationCenter defaultCenter] addObserverForName:kCurrencyBalanceChange object:nil
-                                                       queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
-                                                           [self updateCurrencyBalance];
-                                                       }];
+        queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+            [self updateCurrencyBalance];
+        }];
     
     [[NSNotificationCenter defaultCenter] addObserverForName:kZoneReady object:nil
-                                                       queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
-                                                           [spinner stopAnimating];
-                                                           [spinner setHidden:YES];
-                                                           [button setEnabled:YES];
-                                                       }];
+        queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+            [spinner stopAnimating];
+            [spinner setHidden:YES];
+            [button setEnabled:YES];
+        }];
     
     [[NSNotificationCenter defaultCenter] addObserverForName:kZoneOff object:nil
-                                                       queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
-                                                           [spinner stopAnimating];
-                                                           [spinner setHidden:YES];
-                                                           [button setEnabled:NO];
-                                                       }];
+        queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+            [spinner stopAnimating];
+            [spinner setHidden:YES];
+            [button setEnabled:NO];
+        }];
     
     [[NSNotificationCenter defaultCenter] addObserverForName:kZoneLoading object:nil
-                                                       queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
-                                                           [self zoneLoading];
-                                                       }];
-    
+        queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+            [self zoneLoading];
+        }];
 }
 
-- (void)zoneReady {
+- (void)zoneReady
+{
     [spinner stopAnimating];
     [spinner setHidden:YES];
     [button setEnabled:YES];
 }
 
-- (void)zoneOff {
+- (void)zoneOff
+{
     [spinner stopAnimating];
     [spinner setHidden:YES];
     [button setEnabled:NO];
 }
 
-- (void)zoneLoading {
+- (void)zoneLoading
+{
     [spinner setHidden:NO];
     [spinner startAnimating];
     [button setEnabled:NO];
 }
 
 // Get currency balance from persistent storage and display it
-- (void)updateCurrencyBalance {
+- (void)updateCurrencyBalance
+{
     NSNumber* wrappedBalance = [[NSUserDefaults standardUserDefaults] objectForKey:kCurrencyBalance];
     NSUInteger balance = wrappedBalance && [wrappedBalance isKindOfClass:[NSNumber class]] ? [wrappedBalance unsignedIntValue] : 0;
     [currencyLabel setText:[NSString stringWithFormat:@"%lu", (unsigned long)balance]];
@@ -134,12 +135,12 @@
 
 // Is called when AdColony has finished trying to show an ad, either successfully or unsuccessfully
 // If shown == YES, an ad was displayed and apps should implement app-specific code such as unpausing a game and restarting app music
-- ( void ) onAdColonyAdAttemptFinished:(BOOL)shown inZone:( NSString * )zoneID {
+- ( void ) onAdColonyAdAttemptFinished:(BOOL)shown inZone:( NSString * )zoneID
+{
 	if (shown) {
 		[audio play];
 	} else {
 		NSLog(@"AdColony did not play an ad for zone %@", zoneID);
 	}
 }
-
 @end
