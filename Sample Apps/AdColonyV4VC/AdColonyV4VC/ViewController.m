@@ -43,11 +43,17 @@
             [[NSNotificationCenter defaultCenter] removeObserver:self name:kZoneOff object:nil];
             [[NSNotificationCenter defaultCenter] removeObserver:self name:kZoneLoading object:nil];
         }];
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillEnterForegroundNotification object:nil
+        queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification* note) {
+            [self addObservers];
+        }];
+    
+    [self addObservers];
 }
 
-- (void) viewDidAppear:(BOOL)animated
+- (void)addObservers
 {
-    
     [[NSNotificationCenter defaultCenter] addObserverForName:kCurrencyBalanceChange object:nil
         queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
             [self updateCurrencyBalance];

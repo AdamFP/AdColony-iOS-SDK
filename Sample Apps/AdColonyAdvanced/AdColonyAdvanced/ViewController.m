@@ -32,7 +32,6 @@
     }
 }
 
-
 - (void) viewDidLoad
 {
     // Prepare and play background music
@@ -52,9 +51,16 @@
             [[NSNotificationCenter defaultCenter] removeObserver:self name:kZoneOff object:nil];
             [[NSNotificationCenter defaultCenter] removeObserver:self name:kZoneLoading object:nil];
         }];
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillEnterForegroundNotification object:nil
+        queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification* note) {
+            [self addObservers];
+        }];
+    
+    [self addObservers];
 }
 
-- (void) viewDidAppear:(BOOL)animated
+- (void)addObservers
 {
     [[NSNotificationCenter defaultCenter] addObserverForName:kCurrencyBalanceChange object:nil
         queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
@@ -129,7 +135,8 @@
 
 // Is called when AdColony has taken control of the device screen and is about to begin showing an ad
 // Apps should implement app-specific code such as pausing a game and turning off app music
-- ( void ) onAdColonyAdStartedInZone:( NSString * )zoneID {
+- ( void ) onAdColonyAdStartedInZone:( NSString * )zoneID
+{
 	[audio stop];
 }
 
