@@ -21,62 +21,37 @@
 @implementation ViewController
 @synthesize currencyLabel, spinner, button;
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    } else {
-        return YES;
-    }
-}
+#pragma mark -
+#pragma mark UIViewController Overrides
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self updateCurrencyBalance];
     [self zoneLoading];
-    
-    [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidEnterBackgroundNotification object:nil
-        queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification* note) {
-            [[NSNotificationCenter defaultCenter] removeObserver:self name:kCurrencyBalanceChange object:nil];
-            [[NSNotificationCenter defaultCenter] removeObserver:self name:kZoneReady object:nil];
-            [[NSNotificationCenter defaultCenter] removeObserver:self name:kZoneOff object:nil];
-            [[NSNotificationCenter defaultCenter] removeObserver:self name:kZoneLoading object:nil];
-        }];
-    
-    [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillEnterForegroundNotification object:nil
-        queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification* note) {
-            [self addObservers];
-        }];
-    
     [self addObservers];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeObservers) name:UIApplicationDidEnterBackgroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addObservers) name:UIApplicationDidEnterBackgroundNotification object:nil];
 }
+
+#pragma mark -
+#pragma mark UI Updates
 
 - (void)addObservers
 {
-    [[NSNotificationCenter defaultCenter] addObserverForName:kCurrencyBalanceChange object:nil
-        queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
-            [self updateCurrencyBalance];
-        }];
-    
-    [[NSNotificationCenter defaultCenter] addObserverForName:kZoneReady object:nil
-        queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
-            [spinner stopAnimating];
-            [spinner setHidden:YES];
-            [button setEnabled:YES];
-        }];
-    
-    [[NSNotificationCenter defaultCenter] addObserverForName:kZoneOff object:nil
-        queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
-            [spinner stopAnimating];
-            [spinner setHidden:YES];
-            [button setEnabled:NO];
-        }];
-    
-    [[NSNotificationCenter defaultCenter] addObserverForName:kZoneLoading object:nil
-        queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
-            [self zoneLoading];
-        }];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateCurrencyBalance) name:kCurrencyBalanceChange object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zoneReady) name:kZoneReady object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zoneOff) name:kZoneOff object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zoneLoading) name:kZoneLoading object:nil];
+}
+
+- (void)removeObservers
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kZoneLoading object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kZoneOff object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kZoneReady object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kCurrencyBalanceChange object:nil];
 }
 
 - (void)zoneReady
@@ -110,6 +85,7 @@
 
 #pragma mark -
 #pragma mark AdColony-specific
+
 - (IBAction)triggerVideo
 {
 	[AdColony playVideoAdForZone:@"vzf8e4e97704c4445c87504e" withDelegate:nil withV4VCPrePopup:YES andV4VCPostPopup:YES];
