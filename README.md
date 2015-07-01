@@ -1,7 +1,7 @@
 AdColony iOS SDK
 ==================================
-Modified: 2015/05/18  
-SDK Version: 2.5.1  
+Modified: 2015/06/30  
+SDK Version: 2.5.2  
 
 To Download:
 ----------------------------------
@@ -19,6 +19,11 @@ Contains:
 Getting Started with AdColony:
 ----------------------------------
 New and returning users should review the [quick start guide](https://github.com/AdColony/AdColony-iOS-SDK/wiki), which contains detailed integration instructions.
+
+2.5.2 Change Log:
+----------------------------------
+* AdColonyNativeAdDelegate now reports engagement events from both in-feed and expanded states
+* Centered text in standard in-video engagement (IVE) button
 
 2.5.1 Change Log:
 ----------------------------------
