@@ -1,7 +1,7 @@
 AdColony iOS SDK
 ==================================
-Modified: 2015/06/30  
-SDK Version: 2.5.2  
+Modified: 2015/07/22  
+SDK Version: 2.5.3  
 
 To Download:
 ----------------------------------
@@ -20,6 +20,11 @@ Getting Started with AdColony:
 ----------------------------------
 New and returning users should review the [quick start guide](https://github.com/AdColony/AdColony-iOS-SDK/wiki), which contains detailed integration instructions.
 
+2.5.3 Change Log:
+----------------------------------
+* Fixed bug causing view-dismissal code to be called multiple times
+* Miscellaneous bug fixes
+
 2.5.2 Change Log:
 ----------------------------------
 * AdColonyNativeAdDelegate now reports engagement events from both in-feed and expanded states
@@ -29,7 +34,7 @@ New and returning users should review the [quick start guide](https://github.com
 ----------------------------------
 * Native ads now maintain a weak reference to the app’s view controller
 * Native ad callback for capturing ad-engagement events
-* Synchronized ad-finished callback with AdColony view controller dismissal
+* Serialized view-controller-dismissal and ad-finished callbacks (ad-finished fires second)
 
 2.5.0 Change Log:
 ----------------------------------
