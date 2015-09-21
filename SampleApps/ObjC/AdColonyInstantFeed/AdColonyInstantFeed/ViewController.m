@@ -51,13 +51,13 @@
     
     //Hardcoded data source for our feed
     _posts = [@[@{kCellType : kPost, kPostImage : @"Taco-Bell", kPostImageAR : @3.2f},
+                @{kCellType : kPost, kPostImage : @"Pacific",   kPostImageAR : @1.78f},
                 @{kCellType : kPost, kPostImage : @"MLB",       kPostImageAR : @1.45f},
                 @{kCellType : kPost, kPostImage : @"MTV",       kPostImageAR : @1.68f},
-                @{kCellType : kPost, kPostImage : @"Pacific",   kPostImageAR : @1.78f},
-                @{kCellType : kPost, kPostImage : @"Jobs",      kPostImageAR : @1.78f},
                 @{kCellType : kPost, kPostImage : @"Fallon",    kPostImageAR : @1.33f},
                 @{kCellType : kPost, kPostImage : @"Cashmore",  kPostImageAR : @1.68f},
-                @{kCellType : kPost, kPostImage : @"Pugs",      kPostImageAR : @1.41f}] mutableCopy];
+                @{kCellType : kPost, kPostImage : @"Pugs",      kPostImageAR : @1.41f},
+                @{kCellType : kPost, kPostImage : @"Jobs",      kPostImageAR : @1.78f}] mutableCopy];
     
     //Cached ad source
     _readyAds = [@[] mutableCopy];
@@ -78,7 +78,11 @@
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        return UIInterfaceOrientationMaskAll;
+    } else {
+        return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
+    }
 }
 
 - (BOOL)shouldAutorotate {
@@ -172,7 +176,7 @@
         return YES;
     }
     
-    //If there is an ad view in the 5th position but it is finished, replace it with the new one
+    //If the current ad view is finished, replace it with the new one
     //*** NOTE: Replacing finished ads with new ones will increase publisher revenue
     AdColonyNativeAdView *currentAd = cellConfig[kAdView];
     if (currentAd && [_finishedAds containsObject:currentAd]) {
@@ -234,7 +238,7 @@
         return;
     } else {
         NSLog(@"AdColony returned a valid ad view: %@ for zone: %@.", adView, zoneID);
-        adView.delegate = self; //Set ourself as the delegate of the ad view so we can receive it's callbacks
+        adView.delegate = self;
     }
     
     //Try to insert the new ad view into our feed

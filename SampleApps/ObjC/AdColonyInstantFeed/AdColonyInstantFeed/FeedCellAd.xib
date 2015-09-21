@@ -21,17 +21,14 @@
                             <constraint firstAttribute="width" constant="50" id="nCK-IH-J1t"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advertiser Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="235" translatesAutoresizingMaskIntoConstraints="NO" id="g6x-aJ-hk1">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advertiser Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6x-aJ-hk1">
                         <rect key="frame" x="75" y="10" width="235" height="22"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="235" id="UIY-w8-05d"/>
-                        </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sponsored-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="gZ9-oq-azq">
-                        <rect key="frame" x="134" y="36" width="12" height="12"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Sponsored-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="gZ9-oq-azq">
+                        <rect key="frame" x="134" y="38" width="12" height="12"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ue1-tI-Fuh">
                         <rect key="frame" x="10" y="98" width="300" height="169"/>
@@ -54,13 +51,13 @@
                         </variation>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sponsored" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Apc-mq-Cfj">
-                        <rect key="frame" x="75" y="34" width="57" height="15"/>
+                        <rect key="frame" x="75" y="36" width="57" height="15"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message: Lorem ipsum dolor sit ipsum dolor sit ipsum dolor sit" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="230" translatesAutoresizingMaskIntoConstraints="NO" id="crM-Hv-5eg">
-                        <rect key="frame" x="75" y="56" width="230" height="34"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Message: Lorem ipsum dolor sit ipsum dolor sit ipsum dolor sit" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="234" translatesAutoresizingMaskIntoConstraints="NO" id="crM-Hv-5eg">
+                        <rect key="frame" x="75" y="58" width="230" height="34"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -75,14 +72,17 @@
                     <constraint firstAttribute="bottom" secondItem="ue1-tI-Fuh" secondAttribute="bottom" constant="11" id="GdS-pe-JpO"/>
                     <constraint firstAttribute="trailing" secondItem="crM-Hv-5eg" secondAttribute="trailing" constant="15" id="HJD-Tw-jLD"/>
                     <constraint firstItem="Apc-mq-Cfj" firstAttribute="leading" secondItem="0E6-a0-h60" secondAttribute="trailing" constant="15" id="IrT-ad-P8t"/>
+                    <constraint firstAttribute="trailing" secondItem="g6x-aJ-hk1" secondAttribute="trailing" constant="10" id="P9O-Wr-5II"/>
                     <constraint firstItem="ue1-tI-Fuh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="QxV-oP-mDI"/>
                     <constraint firstItem="gZ9-oq-azq" firstAttribute="top" secondItem="g6x-aJ-hk1" secondAttribute="bottom" constant="4" id="WCE-7m-DOc"/>
+                    <constraint firstItem="Apc-mq-Cfj" firstAttribute="top" secondItem="g6x-aJ-hk1" secondAttribute="bottom" constant="4" id="Ytx-B9-Nq3"/>
                     <constraint firstItem="crM-Hv-5eg" firstAttribute="leading" secondItem="0E6-a0-h60" secondAttribute="trailing" constant="15" id="ayQ-R1-p69"/>
                     <constraint firstItem="0E6-a0-h60" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="jSy-kj-4pY"/>
                     <constraint firstAttribute="centerX" secondItem="ue1-tI-Fuh" secondAttribute="centerX" id="jyR-Zi-25t"/>
                     <constraint firstItem="g6x-aJ-hk1" firstAttribute="leading" secondItem="0E6-a0-h60" secondAttribute="trailing" constant="15" id="mRO-Vl-6ju"/>
                     <constraint firstItem="ue1-tI-Fuh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="pEk-if-DLg"/>
                     <constraint firstAttribute="trailing" secondItem="ue1-tI-Fuh" secondAttribute="trailing" constant="11" id="paA-ks-71l"/>
+                    <constraint firstItem="gZ9-oq-azq" firstAttribute="top" secondItem="g6x-aJ-hk1" secondAttribute="bottom" constant="6" id="rGZ-O1-yE1"/>
                     <constraint firstItem="ue1-tI-Fuh" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="vNE-zE-vGR"/>
                     <constraint firstItem="g6x-aJ-hk1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="vun-hJ-gsh"/>
                     <constraint firstItem="crM-Hv-5eg" firstAttribute="top" secondItem="gZ9-oq-azq" secondAttribute="bottom" constant="8" id="vxo-td-E0x"/>
@@ -91,6 +91,7 @@
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
+                        <exclude reference="9Tf-z3-FQG"/>
                         <exclude reference="zR9-R6-POq"/>
                         <exclude reference="Cb5-gk-hYT"/>
                         <exclude reference="GdS-pe-JpO"/>
@@ -98,6 +99,7 @@
                         <exclude reference="jyR-Zi-25t"/>
                         <exclude reference="pEk-if-DLg"/>
                         <exclude reference="paA-ks-71l"/>
+                        <exclude reference="WCE-7m-DOc"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>
@@ -110,7 +112,7 @@
                 <outlet property="iconView" destination="0E6-a0-h60" id="AZv-0b-T4Y"/>
                 <outlet property="titleLabel" destination="crM-Hv-5eg" id="ezA-Gc-6JA"/>
             </connections>
-            <point key="canvasLocation" x="-2691" y="-1869.5"/>
+            <point key="canvasLocation" x="-2659" y="-1791.5"/>
         </tableViewCell>
     </objects>
     <resources>

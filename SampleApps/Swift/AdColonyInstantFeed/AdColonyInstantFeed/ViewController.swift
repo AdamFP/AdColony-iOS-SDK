@@ -48,17 +48,17 @@ class ViewController: UIViewController, AdColonyDelegate, AdColonyNativeAdDelega
         AdColony.configureWithAppID("app2086517932ad4b608a", zoneIDs: [kAdZone1], delegate: self, logging: true)
         
         //Hardcoded data source for our feed
-        posts = [[kCellType : kPost, kPostImage : "Taco-Bell", kPostImageAR : 3.20 as CGFloat],
+        posts = [[kCellType : kPost, kPostImage : "Taco-Bell", kPostImageAR : 3.2 as CGFloat],
+                 [kCellType : kPost, kPostImage : "Pacific",   kPostImageAR : 1.78 as CGFloat],
                  [kCellType : kPost, kPostImage : "MLB",       kPostImageAR : 1.45 as CGFloat],
                  [kCellType : kPost, kPostImage : "MTV",       kPostImageAR : 1.68 as CGFloat],
-                 [kCellType : kPost, kPostImage : "Pacific",   kPostImageAR : 1.78 as CGFloat],
-                 [kCellType : kPost, kPostImage : "Jobs",      kPostImageAR : 1.70 as CGFloat],
                  [kCellType : kPost, kPostImage : "Fallon",    kPostImageAR : 1.33 as CGFloat],
+                 [kCellType : kPost, kPostImage : "Jobs",      kPostImageAR : 1.7 as CGFloat],
                  [kCellType : kPost, kPostImage : "Pugs",      kPostImageAR : 1.41 as CGFloat],
                  [kCellType : kPost, kPostImage : "Cashmore",  kPostImageAR : 1.68 as CGFloat]]
         
         //Register our nibs
-        tableView.registerNib(UINib(nibName: kFeedCellImage, bundle: nil), forCellReuseIdentifier: kFeedCellImage)
+        tableView.registerNib(UINib(nibName: kFeedCellImage,   bundle: nil), forCellReuseIdentifier: kFeedCellImage)
         tableView.registerNib(UINib(nibName: kFeedCellAd, bundle: nil), forCellReuseIdentifier: kFeedCellAd)
         
         //Hide the table view until we have at least one ready ad
@@ -72,7 +72,11 @@ class ViewController: UIViewController, AdColonyDelegate, AdColonyNativeAdDelega
     
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask
     {
-        return UIInterfaceOrientationMask.Portrait
+        if UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.Pad {
+            return UIInterfaceOrientationMask.All
+        } else {
+            return UIInterfaceOrientationMask.Portrait
+        }
     }
     
     override func shouldAutorotate() -> Bool
@@ -136,6 +140,9 @@ class ViewController: UIViewController, AdColonyDelegate, AdColonyNativeAdDelega
         //Size the native ad view appropriately
         adView.frame = CGRectMake(0, 0, kAdViewWidth, kAdViewHeight)
         
+        //Configure the native ad's engagement button
+        adView.engagementButton?.backgroundColor = UIColor.blackColor()
+        
         //Add the video view to the cell
         adCell.adView = adView
         
@@ -163,7 +170,7 @@ class ViewController: UIViewController, AdColonyDelegate, AdColonyNativeAdDelega
     
     //===================================================
     // MARK:- Updating Feed and Data Source
-    //========================================gla===========
+    //===================================================
     
     func updateFeedWithAdView(adView: AdColonyNativeAdView, zoneID: String) -> Bool {
         let cellConfig = posts[kAdViewCellIndex]
@@ -176,7 +183,7 @@ class ViewController: UIViewController, AdColonyDelegate, AdColonyNativeAdDelega
             return true
         }
         
-        //If there is an ad view in the 5th position but it is finished, replace it with the new one
+        //If the current ad view is finished, replace it with the new one
         //*** NOTE: Replacing finished ads with new ones will increase publisher revenue
         if let oldAdView = cellConfig[kAdView] as? AdColonyNativeAdView {
             if let index = finishedAds.indexOf(oldAdView) {
@@ -215,7 +222,7 @@ class ViewController: UIViewController, AdColonyDelegate, AdColonyNativeAdDelega
         guard let adCell = cell as? FeedCellAd else { return }
         
         //Resume the ad if our table view is going to display it
-        NSLog("Resuming current ad view")
+        NSLog("Resuming ad view: %@", adCell.adView!)
         adCell.adView?.resume()
     }
     
@@ -224,7 +231,7 @@ class ViewController: UIViewController, AdColonyDelegate, AdColonyNativeAdDelega
         guard let adCell = cell as? FeedCellAd else { return }
         
         //Pause the ad if our table view is going to display it
-        NSLog("Pausing current ad view")
+        NSLog("Pausing ad view: %@", adCell.adView!)
         adCell.adView?.pause()
     }
     
@@ -243,7 +250,7 @@ class ViewController: UIViewController, AdColonyDelegate, AdColonyNativeAdDelega
             return
         }
         
-        //Set ourself as the delegate of the ad view so we can receive it's callbacks
+        //Set ourself as the delegate of the valid ad view
         NSLog("AdColony returned a valid ad view: %@ for zone: %@.", adView, zoneID)
         adView.delegate = self
         

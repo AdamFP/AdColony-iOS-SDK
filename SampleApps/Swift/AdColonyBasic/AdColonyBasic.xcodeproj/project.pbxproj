@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		17E727D21B1CDD4400143D53 /* AdColony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E727D11B1CDD4400143D53 /* AdColony.framework */; };
+		9F6CEBB21BB0BCB200AB531B /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6CEBB11BB0BCB200AB531B /* libz.1.2.5.tbd */; };
 		9F874CA61B95095000B9F8D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F874CA41B95095000B9F8D5 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		9FE091261A65B4CB001AA326 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE091251A65B4CB001AA326 /* AppDelegate.swift */; };
 		9FE091281A65B4CB001AA326 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE091271A65B4CB001AA326 /* ViewController.swift */; };
@@ -28,11 +29,11 @@
 		9FE091651A65B546001AA326 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE091551A65B546001AA326 /* StoreKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		9FE091661A65B546001AA326 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE091561A65B546001AA326 /* SystemConfiguration.framework */; };
 		9FE091671A65B546001AA326 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE091571A65B546001AA326 /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		9FFE56C51BAB5CBC00A15993 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FFE56C41BAB5CBC00A15993 /* libz.1.2.5.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		17E727D11B1CDD4400143D53 /* AdColony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdColony.framework; path = ../../../../AdColony.framework; sourceTree = "<group>"; };
+		9F6CEBB11BB0BCB200AB531B /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 		9F874CA51B95095000B9F8D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = AdColonyBasic/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FE091201A65B4CB001AA326 /* AdColonyBasic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdColonyBasic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE091241A65B4CB001AA326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +49,7 @@
 		9FE0914D1A65B546001AA326 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		9FE0914E1A65B546001AA326 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		9FE0914F1A65B546001AA326 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		9FE091501A65B546001AA326 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		9FE091511A65B546001AA326 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		9FE091521A65B546001AA326 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		9FE091531A65B546001AA326 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -56,7 +58,6 @@
 		9FE091561A65B546001AA326 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9FE091571A65B546001AA326 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		9FE091681A65B57E001AA326 /* AdColonyBasic-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AdColonyBasic-Bridging-Header.h"; sourceTree = "<group>"; };
-		9FFE56C41BAB5CBC00A15993 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FFE56C51BAB5CBC00A15993 /* libz.1.2.5.tbd in Frameworks */,
+				9F6CEBB21BB0BCB200AB531B /* libz.1.2.5.tbd in Frameworks */,
 				9FE091581A65B546001AA326 /* AdSupport.framework in Frameworks */,
 				9FE091591A65B546001AA326 /* AudioToolbox.framework in Frameworks */,
 				9FE0915A1A65B546001AA326 /* AVFoundation.framework in Frameworks */,
@@ -90,6 +91,7 @@
 		9FE091171A65B4CB001AA326 = {
 			isa = PBXGroup;
 			children = (
+				9F6CEBB11BB0BCB200AB531B /* libz.1.2.5.tbd */,
 				9FE091221A65B4CB001AA326 /* AdColonyBasic */,
 				9FE091211A65B4CB001AA326 /* Products */,
 			);
@@ -129,7 +131,6 @@
 		9FE091451A65B4F3001AA326 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9FFE56C41BAB5CBC00A15993 /* libz.1.2.5.tbd */,
 				17E727D11B1CDD4400143D53 /* AdColony.framework */,
 				9FE091481A65B546001AA326 /* AdSupport.framework */,
 				9FE091491A65B546001AA326 /* AudioToolbox.framework */,
@@ -139,6 +140,7 @@
 				9FE0914D1A65B546001AA326 /* CoreTelephony.framework */,
 				9FE0914E1A65B546001AA326 /* EventKit.framework */,
 				9FE0914F1A65B546001AA326 /* EventKitUI.framework */,
+				9FE091501A65B546001AA326 /* libz.1.2.5.dylib */,
 				9FE091511A65B546001AA326 /* MediaPlayer.framework */,
 				9FE091521A65B546001AA326 /* MessageUI.framework */,
 				9FE091531A65B546001AA326 /* QuartzCore.framework */,
@@ -345,6 +347,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../..",
@@ -353,6 +356,7 @@
 				INFOPLIST_FILE = AdColonyBasic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-fobjc-arc";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.adcolony.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -372,6 +376,7 @@
 				INFOPLIST_FILE = AdColonyBasic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-fobjc-arc";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.adcolony.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

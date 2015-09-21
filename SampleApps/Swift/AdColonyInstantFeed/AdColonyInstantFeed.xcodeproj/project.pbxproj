@@ -31,9 +31,9 @@
 		9F463AEB1A8C0849003AA7B8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F463AEA1A8C0849003AA7B8 /* Images.xcassets */; };
 		9F463AED1A8C1642003AA7B8 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F463AEC1A8C1642003AA7B8 /* MediaPlayer.framework */; };
 		9F5302DC1A8C1FA300F248EF /* FeedCellImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F5302DB1A8C1FA300F248EF /* FeedCellImage.xib */; };
+		9F6CEBB41BB0BCC800AB531B /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6CEBB31BB0BCC800AB531B /* libz.1.2.5.tbd */; };
 		9F89E6691A8C357A008B5DAF /* FeedCellAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F89E6681A8C357A008B5DAF /* FeedCellAd.swift */; };
 		9F89E66D1A8C37A8008B5DAF /* FeedCellAd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F89E66C1A8C37A8008B5DAF /* FeedCellAd.xib */; };
-		9FFE56C71BAB61C700A15993 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FFE56C61BAB61C700A15993 /* libz.1.2.5.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +52,7 @@
 		9F463AC11A8BF4B4003AA7B8 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		9F463AC21A8BF4B4003AA7B8 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		9F463AC31A8BF4B4003AA7B8 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		9F463AC41A8BF4B4003AA7B8 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		9F463AC51A8BF4B4003AA7B8 /* MediaToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaToolbox.framework; path = System/Library/Frameworks/MediaToolbox.framework; sourceTree = SDKROOT; };
 		9F463AC61A8BF4B4003AA7B8 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		9F463AC71A8BF4B4003AA7B8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -64,9 +65,9 @@
 		9F463AEA1A8C0849003AA7B8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9F463AEC1A8C1642003AA7B8 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		9F5302DB1A8C1FA300F248EF /* FeedCellImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCellImage.xib; sourceTree = "<group>"; };
+		9F6CEBB31BB0BCC800AB531B /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 		9F89E6681A8C357A008B5DAF /* FeedCellAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCellAd.swift; sourceTree = "<group>"; };
 		9F89E66C1A8C37A8008B5DAF /* FeedCellAd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCellAd.xib; sourceTree = "<group>"; };
-		9FFE56C61BAB61C700A15993 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FFE56C71BAB61C700A15993 /* libz.1.2.5.tbd in Frameworks */,
+				9F6CEBB41BB0BCC800AB531B /* libz.1.2.5.tbd in Frameworks */,
 				9F463ACC1A8BF4B4003AA7B8 /* AdSupport.framework in Frameworks */,
 				9F463ACD1A8BF4B4003AA7B8 /* AudioToolbox.framework in Frameworks */,
 				9F463ACE1A8BF4B4003AA7B8 /* AVFoundation.framework in Frameworks */,
@@ -101,6 +102,7 @@
 		9F463A8E1A8BF44F003AA7B8 = {
 			isa = PBXGroup;
 			children = (
+				9F6CEBB31BB0BCC800AB531B /* libz.1.2.5.tbd */,
 				9F463A991A8BF44F003AA7B8 /* AdColonyInstantFeed */,
 				9F463A981A8BF44F003AA7B8 /* Products */,
 			);
@@ -141,7 +143,6 @@
 		9F463ADC1A8BF4C6003AA7B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9FFE56C61BAB61C700A15993 /* libz.1.2.5.tbd */,
 				17E727D31B1CDED000143D53 /* AdColony.framework */,
 				9F463ABC1A8BF4B4003AA7B8 /* AdSupport.framework */,
 				9F463ABD1A8BF4B4003AA7B8 /* AudioToolbox.framework */,
@@ -151,6 +152,7 @@
 				9F463AC11A8BF4B4003AA7B8 /* CoreTelephony.framework */,
 				9F463AC21A8BF4B4003AA7B8 /* EventKit.framework */,
 				9F463AC31A8BF4B4003AA7B8 /* EventKitUI.framework */,
+				9F463AC41A8BF4B4003AA7B8 /* libz.1.2.5.dylib */,
 				9F463AEC1A8C1642003AA7B8 /* MediaPlayer.framework */,
 				9F463AC51A8BF4B4003AA7B8 /* MediaToolbox.framework */,
 				9F463AC61A8BF4B4003AA7B8 /* MessageUI.framework */,
@@ -362,6 +364,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../..",
@@ -369,10 +372,7 @@
 				INFOPLIST_FILE = AdColonyInstantFeed/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-fobjc-arc",
-				);
+				OTHER_LDFLAGS = "-fobjc-arc";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.adcolony.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/AdColonyInstantFeed/AdColonyInstantFeed-Bridging-Header.h";
@@ -392,10 +392,7 @@
 				INFOPLIST_FILE = AdColonyInstantFeed/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-fobjc-arc",
-				);
+				OTHER_LDFLAGS = "-fobjc-arc";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.adcolony.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/AdColonyInstantFeed/AdColonyInstantFeed-Bridging-Header.h";
