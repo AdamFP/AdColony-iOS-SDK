@@ -11,6 +11,12 @@ To Download:
 ----------------------------------
 The simplest way to obtain the AdColony iOS SDK is to click the "Download ZIP" button located in the right-hand navigation pane of the Github repository page.
 
+In addition, you can add the AdColony SDK to your project using [CocoaPods](https://cocoapods.org/). Just add the following to your Podfile
+```
+pod 'AdColony'
+```
+
+
 Contains:
 ----------------------------------
 * AdColony.framework (iOS)
