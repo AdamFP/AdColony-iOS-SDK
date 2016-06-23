@@ -33,8 +33,8 @@ class ViewController: UIViewController, AdColonyAdDelegate
         
         self.updateCurrencyBalance()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "addObservers", name: UIApplicationWillEnterForegroundNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "removeObservers", name: UIApplicationDidEnterBackgroundNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.addObservers), name: UIApplicationWillEnterForegroundNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.removeObservers), name: UIApplicationDidEnterBackgroundNotification, object: nil)
         self.addObservers()
     }
     
@@ -59,10 +59,10 @@ class ViewController: UIViewController, AdColonyAdDelegate
     
     func addObservers()
     {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateCurrencyBalance", name: Constants.currencyBalanceChange, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "zoneReady", name: Constants.zoneReady, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "zoneOff", name: Constants.zoneOff, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "zoneLoading", name: Constants.zoneLoading, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.updateCurrencyBalance), name: Constants.currencyBalanceChange, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.zoneReady), name: Constants.zoneReady, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.zoneOff), name: Constants.zoneOff, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.zoneLoading), name: Constants.zoneLoading, object: nil)
     }
     
     func removeObservers()
