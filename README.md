@@ -3,9 +3,9 @@ AdColony iOS SDK
 Modified: 2016/06/23  
 SDK Version: 2.6.2  
 
-iOS 9 
+iOS 10 
 ----------------------------------
-iOS 9 has introduced a couple of changes that will affect your integration of our new SDK. Please note that following our iOS 9 [integration instructions](https://github.com/AdColony/AdColony-iOS-SDK/wiki/iOS-9) is a strict requirement for apps compiling against the iOS 9 SDK (Xcode 7). Failure to do so will result in ads being turned off for your application. 
+iOS 10 has introduced one change that will affect your integration of our 2.6.2 SDK. Please refer to our [integration instructions](https://github.com/AdColony/AdColony-iOS-SDK/wiki/Xcode-Project-Setup) for details.
 
 To Download:
 ----------------------------------
