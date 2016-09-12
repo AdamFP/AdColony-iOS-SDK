@@ -5,7 +5,7 @@ SDK Version: 2.6.2
 
 iOS 10 
 ----------------------------------
-iOS 10 has introduced one change that will affect your integration of our 2.6.2 SDK. Please refer to our [integration instructions](https://github.com/AdColony/AdColony-iOS-SDK/wiki/Xcode-Project-Setup) for details.
+iOS 10 has introduced one change that will affect your integration of our SDKs. Please refer to our [integration instructions](https://github.com/AdColony/AdColony-iOS-SDK/wiki/Xcode-Project-Setup) for details.
 
 To Download:
 ----------------------------------
